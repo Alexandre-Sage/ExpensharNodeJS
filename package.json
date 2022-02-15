@@ -1,0 +1,24 @@
+{
+  "name": "expressone",
+  "version": "0.0.0",
+  "private": true,
+  "scripts": {
+    "start": "node ./node_modules/.bin/nodemon bin/www"
+  },
+  "dependencies": {
+    "body-parser": "^1.18.3",
+    "chart": "^0.1.2",
+    "chart.js": "^3.6.0",
+    "cookie-parser": "~1.4.4",
+    "debug": "~2.6.9",
+    "express": "~4.16.1",
+    "http-error": "^0.0.6",
+    "http-errors": "~1.6.3",
+    "morgan": "~1.9.1",
+    "mysql2": "^2.3.3-rc.0",
+    "node-sass-middleware": "0.11.0",
+    "nodemon": "^2.0.15",
+    "pug": "2.0.0-beta11",
+    "slugify": "^1.6.2"
+  }
+}

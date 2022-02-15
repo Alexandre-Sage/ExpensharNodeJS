@@ -1,0 +1,13 @@
+extends ../layout
+
+block content
+    include ../navbr
+    h1 Liste des dépenses:
+        div
+            a.navLink(href="/event/"+dataEvent.slug+"/expenses/add") Ajouter
+        ul
+            each v in expenses
+                    li
+                        h3 #{v.title} (#{v.amount}$)
+                        p Payé par #{v.user} le #{v.created_at.toLocaleDateString("fr-FR")}
+                        p Catégorie: #{v.category}

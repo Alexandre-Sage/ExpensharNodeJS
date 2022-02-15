@@ -1,0 +1,10 @@
+extends ../layout
+//-"On récuère ic iles données transmise dans le fichier event.js"
+
+block content
+    include ../navbr
+    h1 DashBoard de "#{dataEvent.name}"
+    canvas#chartCategories(height="400" width="400")
+block javascript
+    script(src='https://cdn.jsdelivr.net/npm/chart.js@3.6.0/dist/chart.min.js')
+    script(src="/javascripts/dashboard.js")

@@ -1,0 +1,23 @@
+extends ../layout
+
+block content
+    include ../navbr
+    h1 Ajouter une nouvelle dépense
+        br
+        form.formcontainer(action=`/event/${dataEvent.slug}/expenses/add`, method="post")
+            br
+            div.row
+                label.form.labelform(for="title") Titre
+                input.form.textform(id="title", name="title", type="text")
+            div.row
+                label.form.labelform(for="user") Nom
+                input.form.textform(id="user", name="user", type="text")
+            div.row
+                label.form.labelform(for="amount") Montant
+                input(id="amount", name="amount", type="number")
+            div.row
+                label.form.labelform(for="category")
+                select(id="category" name="category")
+                    each v in categories
+                        option(value=v.id) #{v.name}
+            button.formbutton(id="addButton", type="submit") Ajouter

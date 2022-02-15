@@ -1,0 +1,9 @@
+extends ../layout
+
+block content
+   .container
+      h1#title Liste des utilisateurs
+      
+      ul
+         each v in sendUsersList
+            li= v 

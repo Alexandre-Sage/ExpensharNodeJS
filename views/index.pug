@@ -1,0 +1,16 @@
+extends layout
+
+block content
+    h1.textCenter Saisissez l'identifiant du groupe
+        form(action="/event/open", method="get")
+            input.form(name="id"  placeholder="Groupe ID", value=notfound)
+            input.btn(type="submit", value="Ouvrir")
+    h1 Ajouter une événement
+        form(action="/event", method="post")
+            div.row
+                label.form(for="name") Nom de l'évenement
+                input.form(id="name", name="name", type="text")
+            div.row
+                button(id="eventButton", type="submit") Ajouter
+    if notfound !== undefined
+        div.alerte #{notfound} n'éxiste pas!!!!!
